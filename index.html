@@ -235,6 +235,109 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/26/gitblit的仓库备份/" itemprop="url">
+                  gitblit的仓库备份
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-09-26T14:17:27+08:00" content="2016-09-26">
+              2016-09-26
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#1.&#x9996;&#x5148;&#x4FEE;&#x6539; gitblit&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;,&#x628A;federation.passphrase &#x7684;&#x503C;&#x6539;&#x4E3A;1<br>&#x279C;  data git:(master) pwd<br>/usr/local/apache-tomcat-7.0.72/webapps/gitblit-1.8.0/WEB-INF/data<br>&#x279C;  data git:(master) vi defaults.properties </p>
+<p>1598 # RESTART REQUIRED <em>(only to enable or disable federation)</em><br>1599 federation.passphrase = 1</p>
+<p>#2.&#x91CD;&#x542F;tomcat, &#x7136;&#x540E;&#x5728;tomcat/logs/catalina.out&#x4E2D;&#x641C;&#x7D22;token , &#x80FD;&#x627E;&#x5230;&#x5982;&#x4E0B;&#x4FE1;&#x606F;</p>
+<p>2016-09-26 11:38:25 [INFO ] Federation ALL token = 39be117190334fa206f474a7c8fd27bab4405141<br>2016-09-26 11:38:25 [INFO ] Federation USERS_AND_REPOSITORIES token = 7ecb704e9376732d11cf1ae99de0ec52f07751ea<br>2016-09-26 11:38:25 [INFO ] Federation REPOSITORIES token = 975be3e3fd91fc8956016ceeba21c92ad5cf98b8</p>
+<p>#3.gitblit&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;fedclient, &#x89E3;&#x538B;<br><a href="http://dl.bintray.com/gitblit/releases/fedclient-1.8.0.zip" target="_blank" rel="external">http://dl.bintray.com/gitblit/releases/fedclient-1.8.0.zip</a><br>&#x6211;&#x662F;&#x76F4;&#x63A5;&#x5728;Downloads&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x89E3;&#x538B;&#x4E86;<br>&#x279C;  fedclient-1.8.0 pwd<br>/Users/du/Downloads/fedclient-1.8.0<br>&#x279C;  fedclient-1.8.0 ls<br>LICENSE               ext                   federation.properties<br>NOTICE                fedclient.jar         users.conf</p>
+<p>#4. &#x4FEE;&#x6539;fedclient&#x7684;&#x914D;&#x7F6E;<br>&#x279C;  fedclient-1.8.0 vi federation.properties </p>
+<p>federation.example1.url = <a href="http://localhost:8080/gitblit-1.8.0/" target="_blank" rel="external">http://localhost:8080/gitblit-1.8.0/</a><br>federation.example1.token = 39be117190334fa206f474a7c8fd27bab4405141<br>federation.example1.frequency = 120 mins<br>federation.example1.folder =<br>federation.example1.bare = true<br>federation.example1.mirror = true<br>federation.example1.mergeAccounts = true</p>
+<p>url&#x662F;tomcat&#x7684;&#x5730;&#x5740;<br>token &#x5219;&#x662F;catalina.out &#x4E2D;&#x627E;&#x5230;&#x7684;, &#x5982;&#x679C;&#x662F;&#x5907;&#x4EFD;&#x6240;&#x6709;&#x4ED3;&#x5E93;&#x7528;ALL token<br>&#x5176;&#x4ED6;&#x4FE1;&#x606F;&#x4E0D;&#x53D8;</p>
+<p>#5. &#x5907;&#x4EFD;<br>java -jar fedclient.jar </p>
+<p>terminal&#x4E2D;&#x6CA1;&#x6709;err &#x51FA;&#x73B0;&#x5C31;&#x662F;&#x6B63;&#x5E38;.&#x4F1A;&#x591A;&#x51FA;&#x4E00;&#x4E2A;git&#x6587;&#x4EF6;&#x5939;,&#x5305;&#x542B;&#x6240;&#x6709;&#x4ED3;&#x5E93;<br>&#x279C;  fedclient-1.8.0 ls<br>LICENSE               fedclient.jar         users.conf<br>NOTICE                federation.properties<br>ext                   git</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/02/begin/" itemprop="url">
                   begin
                 </a>
@@ -349,7 +452,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
